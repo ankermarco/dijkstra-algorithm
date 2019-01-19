@@ -64,11 +64,11 @@ class ConnectionViewModel {
         return cityNodes.filter{ $0.name == name }.first
     }
     
-    func print(_ path: [GKGraphNode]) -> [String] {
+    private func print(_ path: [GKGraphNode]) -> [String] {
         return path.compactMap({ $0 as? City}).compactMap { $0.name }
     }
     
-    func cost(for path: [GKGraphNode]) -> Float {
+    private func cost(for path: [GKGraphNode]) -> Float {
         var total: Float = 0
         for i in 0..<(path.count-1) {
             total += path[i].cost(to: path[i+1])
