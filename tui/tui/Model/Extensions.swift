@@ -23,3 +23,10 @@ extension URLSession: URLSessionProtocol {
         return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
     }
 }
+
+extension Collection where Element: Hashable {
+    var orderedSet: [Element] {
+        var set: Set<Element> = []
+        return reduce(into: []) { set.insert($1).inserted ? $0.append($1) : () }
+    }
+}

@@ -1,5 +1,5 @@
 //
-//  ViewControllerModelTests.swift
+//  ViewControllerViewModelTests.swift
 //  tuiTests
 //
 //  Created by Ke Ma on 19/01/2019.
@@ -8,14 +8,14 @@
 
 import XCTest
 
-class ViewControllerModelTests: XCTestCase {
+class ViewControllerViewModelTests: XCTestCase {
     
-    var viewModel: ViewControllerModel!
+    var viewModel: ViewControllerViewModel!
     var mockedSession: MockURLSession!
 
     override func setUp() {
         mockedSession = MockURLSession()
-        viewModel = ViewControllerModel(environmentName: TEST_ENV_NAME, url: MOCKED_BASEURL, session: mockedSession)
+        viewModel = ViewControllerViewModel(environmentName: TEST_ENV_NAME, url: MOCKED_BASEURL, session: mockedSession)
         
     }
 

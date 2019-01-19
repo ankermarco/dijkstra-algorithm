@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ViewControllerModel {
+class ViewControllerViewModel {
     
     var environment: Environment
     var worker: FlightConnectionsWorker

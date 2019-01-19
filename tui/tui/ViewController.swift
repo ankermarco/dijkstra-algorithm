@@ -10,23 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var viewModel : ViewControllerModel!
+    private var viewModel : ViewControllerViewModel!
+    private var connectionViewModel: ConnectionViewModel!
+    
     var flightConnections = [Connection]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = ViewControllerModel(environmentName: "production", url: "https://raw.githubusercontent.com/punty/TUI-test/master/")
+        viewModel = ViewControllerViewModel(environmentName: "production", url: "https://raw.githubusercontent.com/punty/TUI-test/master/")
         viewModel.fetchFlightConnections { (connections) in
             self.useData(data: connections)
         }
         
     }
     
-    
     private func useData(data: [Connection]) {
-        print(data)
+        
+        connectionViewModel = ConnectionViewModel(connections: data)
+        
+        connectionViewModel.calculateCheapestFlight(from: "London", to: "New York")
+        
     }
+    
+    
  
 
     

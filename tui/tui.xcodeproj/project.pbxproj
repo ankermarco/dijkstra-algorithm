@@ -36,8 +36,8 @@
 		F0FF836021F213D5008DF883 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF835E21F213D5008DF883 /* Worker.swift */; };
 		F0FF836221F22391008DF883 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836121F22391008DF883 /* Response.swift */; };
 		F0FF836321F22391008DF883 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836121F22391008DF883 /* Response.swift */; };
-		F0FF836521F23B36008DF883 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836421F23B36008DF883 /* ViewControllerModel.swift */; };
-		F0FF836621F23B36008DF883 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836421F23B36008DF883 /* ViewControllerModel.swift */; };
+		F0FF836521F23B36008DF883 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836421F23B36008DF883 /* ViewControllerViewModel.swift */; };
+		F0FF836621F23B36008DF883 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836421F23B36008DF883 /* ViewControllerViewModel.swift */; };
 		F0FF836821F31E38008DF883 /* MockedURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836721F31E38008DF883 /* MockedURLSession.swift */; };
 		F0FF836921F32251008DF883 /* MockedURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836721F31E38008DF883 /* MockedURLSession.swift */; };
 		F0FF836A21F326D8008DF883 /* FlightConnectionsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF835C21F2121A008DF883 /* FlightConnectionsEndpoint.swift */; };
@@ -45,9 +45,14 @@
 		F0FF836C21F326FB008DF883 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF835921F13A14008DF883 /* Connection.swift */; };
 		F0FF836E21F32B28008DF883 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836D21F32B28008DF883 /* Extensions.swift */; };
 		F0FF836F21F32B44008DF883 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF836D21F32B28008DF883 /* Extensions.swift */; };
-		F0FF837121F32D44008DF883 /* ViewControllerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837021F32D44008DF883 /* ViewControllerModelTests.swift */; };
+		F0FF837121F32D44008DF883 /* ViewControllerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837021F32D44008DF883 /* ViewControllerViewModelTests.swift */; };
 		F0FF837321F32D8E008DF883 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837221F32D8E008DF883 /* Constants.swift */; };
 		F0FF837421F32DD2008DF883 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837221F32D8E008DF883 /* Constants.swift */; };
+		F0FF837621F337F2008DF883 /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837521F337F2008DF883 /* ConnectionViewModel.swift */; };
+		F0FF837721F337F2008DF883 /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837521F337F2008DF883 /* ConnectionViewModel.swift */; };
+		F0FF837921F37DB7008DF883 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837821F37DB7008DF883 /* City.swift */; };
+		F0FF837A21F37DB7008DF883 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837821F37DB7008DF883 /* City.swift */; };
+		F0FF837F21F398D1008DF883 /* ConnectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837E21F398D1008DF883 /* ConnectionViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,11 +90,14 @@
 		F0FF835C21F2121A008DF883 /* FlightConnectionsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightConnectionsEndpoint.swift; sourceTree = "<group>"; };
 		F0FF835E21F213D5008DF883 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		F0FF836121F22391008DF883 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		F0FF836421F23B36008DF883 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		F0FF836421F23B36008DF883 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
 		F0FF836721F31E38008DF883 /* MockedURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedURLSession.swift; sourceTree = "<group>"; };
 		F0FF836D21F32B28008DF883 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F0FF837021F32D44008DF883 /* ViewControllerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModelTests.swift; sourceTree = "<group>"; };
+		F0FF837021F32D44008DF883 /* ViewControllerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModelTests.swift; sourceTree = "<group>"; };
 		F0FF837221F32D8E008DF883 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F0FF837521F337F2008DF883 /* ConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
+		F0FF837821F37DB7008DF883 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		F0FF837E21F398D1008DF883 /* ConnectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +143,8 @@
 				F0FF833221F13385008DF883 /* Networking */,
 				F0FF830F21F132D8008DF883 /* AppDelegate.swift */,
 				F0FF831121F132D8008DF883 /* ViewController.swift */,
-				F0FF836421F23B36008DF883 /* ViewControllerModel.swift */,
+				F0FF836421F23B36008DF883 /* ViewControllerViewModel.swift */,
+				F0FF837521F337F2008DF883 /* ConnectionViewModel.swift */,
 				F0FF831321F132D8008DF883 /* Main.storyboard */,
 				F0FF831621F132DA008DF883 /* Assets.xcassets */,
 				F0FF831821F132DA008DF883 /* LaunchScreen.storyboard */,
@@ -151,7 +160,8 @@
 				F0FF832621F132DA008DF883 /* Info.plist */,
 				F0FF834721F136C3008DF883 /* EncodingTests.swift */,
 				F0FF834C21F1372A008DF883 /* NetworkDispatcherTests.swift */,
-				F0FF837021F32D44008DF883 /* ViewControllerModelTests.swift */,
+				F0FF837021F32D44008DF883 /* ViewControllerViewModelTests.swift */,
+				F0FF837E21F398D1008DF883 /* ConnectionViewModelTests.swift */,
 			);
 			path = tuiTests;
 			sourceTree = "<group>";
@@ -205,6 +215,7 @@
 				F0FF836121F22391008DF883 /* Response.swift */,
 				F0FF836D21F32B28008DF883 /* Extensions.swift */,
 				F0FF837221F32D8E008DF883 /* Constants.swift */,
+				F0FF837821F37DB7008DF883 /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,7 +333,8 @@
 				F0FF834421F13637008DF883 /* ParameterEncoding.swift in Sources */,
 				F0FF836221F22391008DF883 /* Response.swift in Sources */,
 				F0FF835D21F2121A008DF883 /* FlightConnectionsEndpoint.swift in Sources */,
-				F0FF836521F23B36008DF883 /* ViewControllerModel.swift in Sources */,
+				F0FF837921F37DB7008DF883 /* City.swift in Sources */,
+				F0FF836521F23B36008DF883 /* ViewControllerViewModel.swift in Sources */,
 				F0FF831221F132D8008DF883 /* ViewController.swift in Sources */,
 				F0FF835821F139F8008DF883 /* ConnectionData.swift in Sources */,
 				F0FF831021F132D8008DF883 /* AppDelegate.swift in Sources */,
@@ -334,6 +346,7 @@
 				F0FF834521F13637008DF883 /* URLParameterEncoder.swift in Sources */,
 				F0FF836E21F32B28008DF883 /* Extensions.swift in Sources */,
 				F0FF833721F13460008DF883 /* Endpoint.swift in Sources */,
+				F0FF837621F337F2008DF883 /* ConnectionViewModel.swift in Sources */,
 				F0FF835A21F13A14008DF883 /* Connection.swift in Sources */,
 				F0FF837321F32D8E008DF883 /* Constants.swift in Sources */,
 			);
@@ -344,14 +357,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FF834B21F136F3008DF883 /* JSONParameterEncoder.swift in Sources */,
+				F0FF837F21F398D1008DF883 /* ConnectionViewModelTests.swift in Sources */,
 				F0FF836F21F32B44008DF883 /* Extensions.swift in Sources */,
+				F0FF837A21F37DB7008DF883 /* City.swift in Sources */,
 				F0FF834A21F136F0008DF883 /* URLParameterEncoder.swift in Sources */,
 				F0FF836A21F326D8008DF883 /* FlightConnectionsEndpoint.swift in Sources */,
 				F0FF834921F136EE008DF883 /* ParameterEncoding.swift in Sources */,
-				F0FF836621F23B36008DF883 /* ViewControllerModel.swift in Sources */,
+				F0FF836621F23B36008DF883 /* ViewControllerViewModel.swift in Sources */,
 				F0FF834F21F1375A008DF883 /* HttpTask.swift in Sources */,
 				F0FF836821F31E38008DF883 /* MockedURLSession.swift in Sources */,
-				F0FF837121F32D44008DF883 /* ViewControllerModelTests.swift in Sources */,
+				F0FF837121F32D44008DF883 /* ViewControllerViewModelTests.swift in Sources */,
 				F0FF836321F22391008DF883 /* Response.swift in Sources */,
 				F0FF835121F1375D008DF883 /* HttpMethod.swift in Sources */,
 				F0FF836B21F326F8008DF883 /* ConnectionData.swift in Sources */,
@@ -362,6 +377,7 @@
 				F0FF834821F136C3008DF883 /* EncodingTests.swift in Sources */,
 				F0FF835021F1375D008DF883 /* Endpoint.swift in Sources */,
 				F0FF836021F213D5008DF883 /* Worker.swift in Sources */,
+				F0FF837721F337F2008DF883 /* ConnectionViewModel.swift in Sources */,
 				F0FF834D21F1372A008DF883 /* NetworkDispatcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

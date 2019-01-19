@@ -12,7 +12,7 @@ import Foundation
 struct Connection: Codable {
     let from: String
     let to: String
-    let price: Int
+    let price: Float
 }
 
 extension Connection {
@@ -27,7 +27,7 @@ extension Connection {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         from = try container.decode(String.self, forKey: .from)
         to = try container.decode(String.self, forKey: .to)
-        price = try container.decode(Int.self, forKey: .price)
+        price = try container.decode(Float.self, forKey: .price)
  
     }
 }
