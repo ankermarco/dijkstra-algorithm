@@ -10,24 +10,43 @@ import XCTest
 
 class ConnectionWorkerTests: XCTestCase {
 
+    var cwt: ConnectionWorker!
+    var mockedConnections = [Connection]()
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let con1 = Connection(from: "London", to: "Cape Town", price: 700)
+        let con2 = Connection(from: "Cape Town", to: "Tokyo", price: 600)
+        let con3 = Connection(from: "London", to: "Tokyo", price: 1600)
+        mockedConnections.append(con1)
+        mockedConnections.append(con2)
+        mockedConnections.append(con3)
+        cwt = ConnectionWorker(connections: mockedConnections)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        cwt = nil
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testAddedCorrectCities() {
+        XCTAssertEqual(cwt.cityNodes.count, 3)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testAddedGraphNode() {
+        guard let graphNodes = cwt.cityGraph.nodes else {
+            XCTFail("graph nodes number shouldn't be zero")
+            return
         }
+        XCTAssertEqual(3, graphNodes.count)
     }
+    
+    func testNodeShouldHaveConnectedNodes() {
+        guard let node = cwt.cityNodeTracker["London"] else {
+            return
+        }
+        
+        XCTAssertEqual(2, node.travelCost.count)
+    }
+    
+    
 
 }

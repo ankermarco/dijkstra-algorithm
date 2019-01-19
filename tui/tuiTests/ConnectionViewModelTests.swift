@@ -24,27 +24,7 @@ class ConnectionViewModelTests: XCTestCase {
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
-    func testAddedCorrectCities() {
-        XCTAssertEqual(viewModel.cityNodes.count, 3)
-    }
-    
-    func testAddedGraphNode() {
-        guard let graphNodes = viewModel.cityGraph.nodes else {
-            XCTFail("graph nodes number shouldn't be zero")
-            return
-        }
-        XCTAssertEqual(3, graphNodes.count)
-    }
-    
-    func testNodeShouldHaveConnectedNodes() {
-        guard let node = viewModel.cityNodeTracker["London"] else {
-            return
-        }
-        
-        XCTAssertEqual(2, node.travelCost.count)
+        viewModel = nil
     }
     
     func testCanFindCheapestPath() {

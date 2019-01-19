@@ -53,6 +53,9 @@
 		F0FF837921F37DB7008DF883 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837821F37DB7008DF883 /* City.swift */; };
 		F0FF837A21F37DB7008DF883 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837821F37DB7008DF883 /* City.swift */; };
 		F0FF837F21F398D1008DF883 /* ConnectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF837E21F398D1008DF883 /* ConnectionViewModelTests.swift */; };
+		F0FF838121F3DA71008DF883 /* ConnectionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF838021F3DA70008DF883 /* ConnectionWorker.swift */; };
+		F0FF838221F3DA71008DF883 /* ConnectionWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF838021F3DA70008DF883 /* ConnectionWorker.swift */; };
+		F0FF838521F3DD4B008DF883 /* ConnectionWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FF838421F3DD4B008DF883 /* ConnectionWorkerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,8 @@
 		F0FF837521F337F2008DF883 /* ConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
 		F0FF837821F37DB7008DF883 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		F0FF837E21F398D1008DF883 /* ConnectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewModelTests.swift; sourceTree = "<group>"; };
+		F0FF838021F3DA70008DF883 /* ConnectionWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionWorker.swift; sourceTree = "<group>"; };
+		F0FF838421F3DD4B008DF883 /* ConnectionWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionWorkerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +146,7 @@
 			children = (
 				F0FF835621F13973008DF883 /* Model */,
 				F0FF833221F13385008DF883 /* Networking */,
+				F0FF838321F3DA7E008DF883 /* FlightConnection */,
 				F0FF830F21F132D8008DF883 /* AppDelegate.swift */,
 				F0FF831121F132D8008DF883 /* ViewController.swift */,
 				F0FF836421F23B36008DF883 /* ViewControllerViewModel.swift */,
@@ -161,6 +167,7 @@
 				F0FF834721F136C3008DF883 /* EncodingTests.swift */,
 				F0FF834C21F1372A008DF883 /* NetworkDispatcherTests.swift */,
 				F0FF837021F32D44008DF883 /* ViewControllerViewModelTests.swift */,
+				F0FF838421F3DD4B008DF883 /* ConnectionWorkerTests.swift */,
 				F0FF837E21F398D1008DF883 /* ConnectionViewModelTests.swift */,
 			);
 			path = tuiTests;
@@ -226,6 +233,14 @@
 				F0FF835C21F2121A008DF883 /* FlightConnectionsEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		F0FF838321F3DA7E008DF883 /* FlightConnection */ = {
+			isa = PBXGroup;
+			children = (
+				F0FF838021F3DA70008DF883 /* ConnectionWorker.swift */,
+			);
+			path = FlightConnection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +362,7 @@
 				F0FF836E21F32B28008DF883 /* Extensions.swift in Sources */,
 				F0FF833721F13460008DF883 /* Endpoint.swift in Sources */,
 				F0FF837621F337F2008DF883 /* ConnectionViewModel.swift in Sources */,
+				F0FF838121F3DA71008DF883 /* ConnectionWorker.swift in Sources */,
 				F0FF835A21F13A14008DF883 /* Connection.swift in Sources */,
 				F0FF837321F32D8E008DF883 /* Constants.swift in Sources */,
 			);
@@ -359,6 +375,8 @@
 				F0FF834B21F136F3008DF883 /* JSONParameterEncoder.swift in Sources */,
 				F0FF837F21F398D1008DF883 /* ConnectionViewModelTests.swift in Sources */,
 				F0FF836F21F32B44008DF883 /* Extensions.swift in Sources */,
+				F0FF838221F3DA71008DF883 /* ConnectionWorker.swift in Sources */,
+				F0FF838521F3DD4B008DF883 /* ConnectionWorkerTests.swift in Sources */,
 				F0FF837A21F37DB7008DF883 /* City.swift in Sources */,
 				F0FF834A21F136F0008DF883 /* URLParameterEncoder.swift in Sources */,
 				F0FF836A21F326D8008DF883 /* FlightConnectionsEndpoint.swift in Sources */,

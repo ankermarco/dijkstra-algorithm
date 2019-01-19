@@ -31,7 +31,6 @@ class ViewControllerViewModel {
             default:
                 print("error")
             }
-                
             
         })
     }
