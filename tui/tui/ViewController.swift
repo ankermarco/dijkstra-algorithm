@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var departureTF: UITextField!
+    @IBOutlet weak var destinationTF: UITextField!
+    
+    @IBOutlet weak var costLabel: UILabel!
+    
     private var viewModel : ViewControllerViewModel!
     private var connectionViewModel: ConnectionViewModel!
     
@@ -19,23 +24,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel = ViewControllerViewModel(environmentName: "production", url: "https://raw.githubusercontent.com/punty/TUI-test/master/")
-        viewModel.fetchFlightConnections { (connections) in
-            self.useData(data: connections)
+        viewModel.fetchFlightConnections { [weak self] (connections) in
+            self?.connectionViewModel = ConnectionViewModel(connections: connections)
         }
         
     }
     
-    private func useData(data: [Connection]) {
-        
-        connectionViewModel = ConnectionViewModel(connections: data)
-        
-        connectionViewModel.calculateCheapestFlight(from: "London", to: "New York")
+    @IBAction func tapButton(_ sender: UIButton) {
+        let from = departureTF.text
+        let to = destinationTF.text
+        if let from = from, let to = to {
+            let cost = connectionViewModel.calculateCheapestFlight(from: from, to: to)
+            costLabel.text = String(cost.1)
+        }
         
     }
-    
-    
- 
+}
 
+extension ViewController: UITextFieldDelegate {
     
 }
 

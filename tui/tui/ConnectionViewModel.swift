@@ -36,7 +36,7 @@ class ConnectionViewModel {
         // Create Graph Node
         for city in cities {
             let node = City(name: city)
-            cityNodeTracker[city] = node
+            cityNodeTracker[city.sanitise()] = node
             cityNodes.append(node)
         }
         cityGraph.add(cityNodes)
@@ -78,7 +78,7 @@ class ConnectionViewModel {
     
     func calculateCheapestFlight(from departure: String, to: String) -> ( [String], Float) {
         
-        if let from = cityNodeTracker[departure], let to = cityNodeTracker[to] {
+        if let from = cityNodeTracker[departure.sanitise()], let to = cityNodeTracker[to.sanitise()] {
             let path = cityGraph.findPath(from: from, to: to)
             if path.count > 0 {
                return (print(path), cost(for: path))

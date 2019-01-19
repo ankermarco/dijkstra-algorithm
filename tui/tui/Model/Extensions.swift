@@ -30,3 +30,9 @@ extension Collection where Element: Hashable {
         return reduce(into: []) { set.insert($1).inserted ? $0.append($1) : () }
     }
 }
+
+extension String {
+    func sanitise()-> String {
+        return self.lowercased().trimmingCharacters(in: .whitespaces).components(separatedBy: .whitespaces).joined()
+    }
+}
